@@ -21,7 +21,7 @@ pkgver() {
 
 build() {
     cd "$srcdir/${pkgname%-git}"
-    cmake -DCMAKE_INSTALL_PREFIX=/usr
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     make
 }
 
